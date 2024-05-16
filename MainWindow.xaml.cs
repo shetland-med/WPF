@@ -24,28 +24,30 @@ namespace WpfApp1
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); // XAMLの初期化
         }
 
+        // ファイル選択ボタンのクリックイベントハンドラー
         private void SelectFileButton_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            OpenFileDialog openFileDialog = new OpenFileDialog(); // ファイルダイアログを開く
             if (openFileDialog.ShowDialog() == true)
             {
-                FileNameTextBox.Text = openFileDialog.FileName;
+                FileNameTextBox.Text = openFileDialog.FileName; // 選択したファイル名をテキストボックスに表示
             }
         }
 
+        // 登録ボタンのクリックイベントハンドラー
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            string fileName = FileNameTextBox.Text;
+            string fileName = FileNameTextBox.Text; // テキストボックスからファイル名を取得
             if (!string.IsNullOrEmpty(fileName))
             {
-                Debug.WriteLine("Selected File: " + fileName);
+                Debug.WriteLine("Selected File: " + fileName); // デバッグウィンドウにファイル名を出力
             }
             else
             {
-                MessageBox.Show("Please select a file first.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Please select a file first.", "Error", MessageBoxButton.OK, MessageBoxImage.Error); // ファイル未選択時のエラーメッセージ
             }
         }
     }

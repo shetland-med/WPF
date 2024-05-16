@@ -7,8 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <!-- ファイル名表示用テキストボックス -->
         <TextBox Name="FileNameTextBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
+        
+        <!-- ファイル選択ボタン -->
         <Button Content="Select File" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="23" Margin="320,10,0,0" Click="SelectFileButton_Click"/>
+        
+        <!-- 登録ボタン -->
         <Button Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="23" Margin="10,50,0,0" Click="RegisterButton_Click"/>
     </Grid>
 
